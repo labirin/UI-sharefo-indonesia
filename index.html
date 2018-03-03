@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ShareFo Indonesia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS
+================================================== -->
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="css/custom-styles.css">
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="img/favicon.png">
+
+<!-- JS
+================================================== -->
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+    $("#btn-blog-next").click(function () {
+      $('#blogCarousel').carousel('next')
+    });
+     $("#btn-blog-prev").click(function () {
+      $('#blogCarousel').carousel('prev')
+    });
+
+     $("#btn-client-next").click(function () {
+      $('#clientCarousel').carousel('next')
+    });
+     $("#btn-client-prev").click(function () {
+      $('#clientCarousel').carousel('prev')
+    });
+    
+});
+
+ $(window).load(function(){
+
+    $('.flexslider').flexslider({
+        animation: "slide",
+        slideshow: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+    });  
+});
+
+</script>
+</head>
+
+<!-- Start Body
+================================================== -->
+<body class="home">
+    <!-- Color Bars (above header)-->
+	<div class="color-bar-1"></div>	<div class="color-bar-1"></div>
+    <div class="color-bar-2 color-bg"></div>
+
+
+    
+    <div class="container">
+    
+      <div class="row header "><!-- Begin Header -->
+      
+        <!-- Logo
+        ================================================== -->
+        <div class="span5 logo">
+        	<a href="index.html"><img src="img/piccolo-logo.png" alt="" /></a>
+        </div>
+        
+        <!-- Main Navigation
+        ================================================== -->
+        <div class="span7 navigation" >
+            <div class="navbar hidden-phone">
+            
+            <ul class="nav">
+			<li class="active"><a href="index.html">Home</a></li>  
+			<li><a href="page-about.html">About</a></li>
+			<li><a href="">U-Share</a></li>
+			<li><a href="page-contact.html">Contact</a></li>
+			<li><a href="getstarted.html">Login/Register</a></li>
+            </ul>
+           
+            </div>
+
+            <!-- Mobile Nav
+            ================================================== -->
+            <center><form action="#" id="mobile-nav" class="visible-phone">
+                <div class="mobile-nav-select">
+                <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+                    <option value="">Navigate...</option>
+                    <option value="index.html">Home</option>
+                    <option value="page-about.html">About</option>
+					<option value="">U-Share</option>
+                    <option value="page-contact.html">Contact</option>
+					<option value="page-me.html">Login/Register</option>
+                </select>
+                </div>
+                </form></center>
+            
+        </div>
+
+        
+      </div><!-- End Header -->
+
+     
+    <div class="row headline"><!-- Begin Headline -->
+    
+     	<!-- Slider Carousel
+        ================================================== -->
+        <div class="span7">
+        	<div class="flexslider">
+              <ul class="slides">
+                <li><a href="blog-single.html"><img src="img/gallery/slider-img-2.jpg" alt="slider" /></a></li>
+                <li><a href="blog-single.html"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="blog-single.html"><img src="img/gallery/slider-img-2.jpg" alt="slider" /></a></li>
+                <li><a href="blog-single.html"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="blog-single.html"><img src="img/gallery/slider-img-2.jpg" alt="slider" /></a></li>
+              </ul>
+            </div>
+        </div>
+        
+        <!-- Headline Text
+        ================================================== -->
+        <div class="span5">
+
+            <h5 class="title-bg">Sharing
+                <small>Information</small> 
+            </h5>
+			
+			<div id="clientCarousel" class="carousel slide no-margin ">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="activeitem">
+                    <p class="quote-text">"Jadilah bagian dari kami dengan berbagi informasi ke sesama melalui platform sharefo."<cite>Tulis artikel menarik tentang hal-hal penting dan informatif yang ada di sekitarmu! <a href="">Daftar Sekarang!</a></cite></p>
+                </div>
+            </div>
+            
+
+            <!-- Client Logo Thumbs-->
+            <table class="image-table" align="center">
+            <tbody>
+            <tr class="row-menu">
+                <td ><a href="page-negara.html" ><img class="menu" src="img/gallery/111.png" alt="Client"></a></td>
+                <td><a href="page-traveler.html"><img class="menu" src="img/gallery/222.png" alt="Client"></a></td>
+                <td><a href="page-diaspora.html"><img class="menu" src="img/gallery/333.png" alt="Client"></a></td>
+                <td><a href="page-ppidunia.html"><img class="menu" src="img/gallery/444.png" alt="Client"></a></td>
+            </tr>
+             </tbody>
+            </table>
+            </div>
+        </div>
+
+    </div><!-- End Headline -->
+    </div>
+	
+
+	<div class="container">
+    <div class="row"><!-- Begin Bottom Section -->
+    
+		<!-- Client Area
+        ================================================== -->
+        <div class="span6">
+
+            <h5 class="title-bg">Question and Answer</h5>
+            <ul class="popular-posts">
+                <li>
+                    <a href="#"><img src="img/gallery/gallery-img-2-thumb.png" alt="Popular Post"></a>
+                    <h6><a href="#"><label>[Hit Q]</label> Ada yang punya info tentang beasiswa LPDP kah?</a></h6>
+                    <em>Posted on 09/04/17</em>
+                </li>
+                <li>
+                    <a href="#"><img src="img/gallery/gallery-img-2-thumb2.png" alt="Popular Post"></a>
+                    <h6><a href="#"><label>[New Q]</label>Bagaimana cara bikin visa untuk ke Jepang?</a></h6>
+                    <em>Posted on 09/04/17</em>
+                <li>
+                    <a href="#"><img src="img/gallery/gallery-img-2-thumb3.png" alt="Popular Post"></a>
+                    <h6><a href="#">Di Jepang, untuk yang jurusan sastra terbaik ada dimana?</a></h6>
+                    <em>Posted on 09/04/17</em>
+                </li>
+            </ul>
+
+        </div>
+		
+    	<!-- Blog Preview
+        ================================================== -->
+    	<div class="span6">
+
+            <h5 class="title-bg">Recent
+                <small>Update</small>
+                <button id="btn-blog-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
+                <button id="btn-blog-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
+            </h5>
+
+        <div id="blogCarousel" class="carousel slide ">
+
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+
+                 <!-- Blog Item 1 -->
+                <div class="active item">
+                    <a href="blog-single.htm"><img src="img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <div class="post-info clearfix">
+                        <h4><a href="blog-single.html">Lokasi terbaik menikmati musim spring di kota nanjing</a></h4>
+                        <ul class="blog-details-preview">
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Jan 4, 2017<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link">Admin</a><li>
+                            <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
+                            <li><i class="icon-tags"></i> <a href="#">indonesia</a>, <a href="#">news</a>, <a href="#">mahasiswa</a>
+                        </ul>
+                    </div>
+                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
+                </div>
+
+                <!-- Blog Item 2 -->
+                 <div class="item">
+                    <a href="blog-single.htm"><img src="img/gallery/blog-med-img-2.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <div class="post-info clearfix">
+                        <h4><a href="blog-single.html">konferensi PPI Dunia di Inggris</a></h4>
+                        <ul class="blog-details-preview">
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Maret 4, 2017<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link">Admin</a><li>
+                            <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
+                            <li><i class="icon-tags"></i> <a href="#">ppidunia</a>, <a href="#">mahasiswa</a>, <a href="#">indonesia</a>
+                        </ul>
+                    </div>
+                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
+                </div>
+
+                 <!-- Blog Item 3 -->
+                 <div class="item">
+                    <a href="blog-single.htm"><img src="img/gallery/blog-med-img-3.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <div class="post-info clearfix">
+                        <h4><a href="blog-single.html">Menikmati liburan selama 3 hari 4 malam di Antartika</a></h4>
+                        <ul class="blog-details-preview">
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Sept 4, 2017<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong> <a href="#" title="Link">Admin</a><li>
+                            <li><i class="icon-comment"></i><strong>Comments:</strong> <a href="#" title="Link">12</a><li>
+                            <li><i class="icon-tags"></i> <a href="#">travelling</a>, <a href="#">china</a>, <a href="#">nanjing</a>
+                        </ul>
+                    </div>
+                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Read more</a><p>
+                </div>
+                
+            </div>
+            </div> 	
+        </div>
+        
+        
+        
+    </div><!-- End Bottom Section -->
+    
+	</div> <!-- End Container -->
+
+    <!-- Footer Area
+        ================================================== -->
+
+	<div class="footer-container"><!-- Begin Footer -->
+    	<div class="container">
+        	<div class="row footer-row">
+                <div class="span2 footer-col">
+                    <h5>Platform</h5>
+                     <ul class="post-list">
+                        <li><a href="#">Contack Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Term & Service</a></li>
+                        <li><a href="#">Guide</a></li>
+                    </ul>
+                </div>
+                <div class="span2 footer-col">
+                    <h5>Features</h5>
+                     <ul class="post-list">
+                        <li><a href="#">Become Our Partner</a></li>
+                        <li><a href="#">Job Opportunity</a></li>
+                        <li><a href="#">PPIT</a></li>
+                        <li><a href="#">Diaspora</a></li>
+                    </ul>
+                </div>
+                <div class="span2 footer-col">
+                    <h5>About Us</h5>
+                   <img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />
+                    <address>
+                        <strong>Sharing Information</strong><br />
+                        Jiangsu 123, Fangshan 123<br />
+                        Nanjing, China 12345<br />
+                    </address>
+                </div>
+                <div class="span6 footer-col">
+                    <ul>
+                        <p><b>Sharefo</b> adalah situs web berbagi informasi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. </p>
+                        <p><a href="page-about.html">Read More..</a></p>
+                        <ul class="social-icons">
+                        <li><a href="#" class="social-icon facebook"></a></li>
+                        <li><a href="#" class="social-icon twitter"></a></li>
+                        <li><a href="#" class="social-icon dribble"></a></li>
+                    </ul>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <div class="row"><!-- Begin Sub Footer -->
+                <div class="span12 footer-col footer-sub">
+                    <div class="row no-margin">
+                        <div class="pull-right "><span class="left">&copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.sharefo.com">Sharefo.com</a>, Sharing Information</span></div>
+                        
+                    </div>
+                </div>
+            </div><!-- End Sub Footer -->
+
+        </div>
+    </div><!-- End Footer -->
+
+        </div>
+    </div><!-- End Footer --> 
+
+    <!-- Scroll to Top -->  
+    <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
+    
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ShareFo Indonesia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS
+================================================== -->
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="css/prettyPhoto.css" />
+<link rel="stylesheet" href="css/flexslider.css" />
+<link rel="stylesheet" href="css/custom-styles.css">
+
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="css/style-ie.css"/>
+<![endif]--> 
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="img/favicon.png">
+
+<!-- JS
+================================================== -->
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.custom.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+    $("#btn-blog-next").click(function () {
+      $('#blogCarousel').carousel('next')
+    });
+     $("#btn-blog-prev").click(function () {
+      $('#blogCarousel').carousel('prev')
+    });
+
+     $("#btn-client-next").click(function () {
+      $('#clientCarousel').carousel('next')
+    });
+     $("#btn-client-prev").click(function () {
+      $('#clientCarousel').carousel('prev')
+    });
+    
+});
+
+ $(window).load(function(){
+
+    $('.flexslider').flexslider({
+        animation: "slide",
+        slideshow: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+    });  
+});
+
+</script>
+
+</head>
+
+<body class="home">
+    <!-- Color Bars (above header)-->
+	<div class="color-bar-1"></div>	<div class="color-bar-1"></div>
+    <div class="color-bar-2 color-bg"></div>
+
+    
+    <div class="container">
+    
+      <div class="row header"><!-- Begin Header -->
+      
+        <!-- Logo
+        ================================================== -->
+        <div class="span5 logo">
+        	<a href="index.html"><img src="img/piccolo-logo.png" alt="" /></a>
+        </div>
+        
+        <!-- Main Navigation
+        ================================================== -->
+        <div class="span7 navigation">
+            <div class="navbar hidden-phone">
+            
+            <ul class="nav">
+			<li><a href="index.html">Home</a></li>  
+			<li><a href="page-about.html">About</a></li>
+			<li><a href="">U-Share</a></li>
+			<li class="active"><a href="page-contact.html">My Profile</a></li>
+			<li><a href="page-me.html">Logout</a></li>
+            </ul>
+           
+            </div>
+
+            <!-- Mobile Nav
+            ================================================== -->
+            <form action="#" id="mobile-nav" class="visible-phone">
+                <div class="mobile-nav-select">
+                <select onchange="window.open(this.options[this.selectedIndex].value,'_top')">
+                    <option value="">Navigate...</option>
+                    <option value="index.html">Home</option>
+                    <option value="page-about.html">About</option>
+					<option value="">U-Share</option>
+					<option value="page-contact.html">Profile</option>
+					<option value="page-me.html">Logout</option>
+                </select>
+                </div>
+                </form>
+            
+        </div>
+        
+      </div><!-- End Header -->
+     
+    <!-- Blog Content
+    ================================================== --> 
+    <div class="row">
+
+        <!-- Blog Posts
+        ================================================== --> 
+        <div class="span8 blog">
+			<h3 class="title-bg"><a href="#">Edit Profile</a></h3>
+			
+			<div class="well">
+				<ul class="nav nav-tabs">
+				  <li class="active"><a href="#home" data-toggle="tab">Detail Information</a></li>
+				  <li><a href="#profile" data-toggle="tab">Password</a></li>
+				</ul>
+			<div id="myTabContent" class="tab-content">
+			<div class="tab-pane active in" id="home">
+        <form id="tab">
+            <label><b>First Name</b></label>
+            <input type="text" value="" class="input-xlarge">
+            <label><b>Last Name</b></label>
+            <input type="text" value="" class="input-xlarge">
+			<label><b>Username</b></label>
+            <input type="text" value="" class="input-xlarge">
+			<label><b>Gender</b></label>
+            <select name="DropDownGender" id="DropDownG" class="input-xlarge">
+              <option value="">Male</option>
+              <option value="">Female</option>
+            </select>
+			
+			<label><b>Address</b></label>
+            <input type="text" value="" class="input-xlarge">
+            <label><b>Email</b></label>
+            <input type="text" value="" class="input-xlarge">
+			<label><b>Phone Number</b></label>
+            <input type="text" value="" class="input-xlarge">
+            <label><b>ID Wechat</b></label>
+            <input type="text" value="" class="input-xlarge">
+          	<label><b>About Me</b></label>
+            <textarea value="" rows="3" class="input-xlarge">
+            </textarea>
+
+			<div>
+        	    <a href="#myModal" role="button" data-toggle="modal"><button class="btn btn-primary">Update</button></a>
+        	</div>
+        </form>
+      </div>
+      <div class="tab-pane fade" id="profile">
+    	<form id="tab2">
+        	<label>Old Password</label>
+        	<input type="password" class="input-xlarge">
+			<label>New Password</label>
+        	<input type="password" class="input-xlarge">
+			<label>Confirm Password</label>
+        	<input type="password" class="input-xlarge">
+        	<div>
+        	    <a href="#myModal" role="button" data-toggle="modal"><button class="btn btn-primary">Update</button></a>
+					</div>
+				</form>
+			  </div>
+		  </div>
+		</div>
+			
+			
+		<!-- POPUP BOX -->
+		<div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<h5 id="myModalLabel">Your Registration Successed</h5>
+			</div>
+			<div class="modal-body">
+				<p>Please, open your email address, we send you link verification. Thank you :)</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-inverse">Close</button>
+			</div>
+		</div>	
+			
+			
+			
+		</div>
+
+        <!-- Blog Sidebar
+        ================================================== --> 
+        <div class="span4 sidebar">
+
+            <!--Search-->
+            <section>
+                <div class="input-append">
+                    <form action="#">
+                        <input id="appendedInputButton" size="16" type="text" placeholder="Search"><button class="btn" type="button"><i class="icon-search"></i></button>
+                    </form>
+                </div>
+            </section>
+
+            
+			
+			<!--Q&A-->
+			<h5 class="title-bg">Question and Answer</h5>
+            <ul class="popular-posts">
+                <li>
+                    <a href="#"><img src="img/gallery/gallery-img-2-thumb.png" alt="Popular Post"></a>
+                    <h6><a href="#"><label>[Hit Q]</label> Ada yang punya info tentang beasiswa LPDP kah?</a></h6>
+                    <em>Posted on 09/04/17</em>
+                </li>
+                <li>
+                    <a href="#"><img src="img/gallery/gallery-img-2-thumb2.png" alt="Popular Post"></a>
+                    <h6><a href="#"><label>[New Q]</label>Bagaimana cara bikin visa untuk ke Jepang?</a></h6>
+                    <em>Posted on 09/04/17</em>
+                <li>
+                    <a href="#"><img src="img/gallery/gallery-img-2-thumb3.png" alt="Popular Post"></a>
+                    <h6><a href="#">Di Jepang, untuk yang jurusan sastra terbaik ada dimana?</a></h6>
+                    <em>Posted on 09/04/17</em>
+                </li>
+            </ul>
+
+            <!--Popular Posts-->
+            <h5 class="title-bg">Popular Posts</h5>
+            <ul class="popular-posts">
+                <li>
+                    <a href="blog-single.htm"><img src="img/gallery/gallery-img-2-thumb.jpg" alt="Popular Post"></a>
+                    <h6><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h6>
+                    <em>Posted on 09/01/15</em>
+                </li>
+                <li>
+                    <a href="blog-single.htm"><img src="img/gallery/gallery-img-2-thumb.jpg" alt="Popular Post"></a>
+                    <h6><a href="#">Nulla iaculis mattis lorem, quis gravida nunc iaculis</a></h6>
+                    <em>Posted on 09/01/15</em>
+                <li>
+                    <a href="blog-single.htm"><img src="img/gallery/gallery-img-2-thumb.jpg" alt="Popular Post"></a>
+                    <h6><a href="#">Vivamus tincidunt sem eu magna varius elementum maecenas felis</a></h6>
+                    <em>Posted on 09/01/15</em>
+                </li>
+            </ul>
+
+            
+
+            
+        </div>
+
+    </div>
+    
+    </div> <!-- End Container -->
+
+    <!-- Footer Area
+        ================================================== -->
+
+    <div class="footer-container"><!-- Begin Footer -->
+        <div class="container">
+            <div class="row footer-row">
+                <div class="span2 footer-col">
+                    <h5>Platform</h5>
+                     <ul class="post-list">
+                        <li><a href="#">Contack Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Term & Service</a></li>
+                        <li><a href="#">Guide</a></li>
+                    </ul>
+                </div>
+                <div class="span2 footer-col">
+                    <h5>Features</h5>
+                     <ul class="post-list">
+                        <li><a href="#">Become Our Partner</a></li>
+                        <li><a href="#">Job Opportunity</a></li>
+                        <li><a href="#">PPIT</a></li>
+                        <li><a href="#">Diaspora</a></li>
+                    </ul>
+                </div>
+                <div class="span2 footer-col">
+                    <h5>About Us</h5>
+                   <img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />
+                    <address>
+                        <strong>Sharing Information</strong><br />
+                        Jiangsu 123, Fangshan 123<br />
+                        Nanjing, China 12345<br />
+                    </address>
+                </div>
+                <div class="span6 footer-col">
+                    <ul>
+                        <p><b>Sharefo</b> adalah situs web berbagi informasi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. </p>
+                        <p><a href="page-about.html">Read More..</a></p>
+                        <ul class="social-icons">
+                        <li><a href="#" class="social-icon facebook"></a></li>
+                        <li><a href="#" class="social-icon twitter"></a></li>
+                        <li><a href="#" class="social-icon dribble"></a></li>
+                    </ul>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <div class="row"><!-- Begin Sub Footer -->
+                <div class="span12 footer-col footer-sub">
+                    <div class="row no-margin">
+                        <div class="pull-right "><span class="left">&copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.sharefo.com">Sharefo.com</a>, Sharing Information</span></div>
+                        
+                    </div>
+                </div>
+            </div><!-- End Sub Footer -->
+
+        </div>
+    </div><!-- End Footer -->
+
+        </div>
+    </div><!-- End Footer --> 
+
+    <!-- Scroll to Top -->  
+    <div id="toTop" class="hidden-phone hidden-tablet">Back to Top</div>
+    
+</body>
+</html>
