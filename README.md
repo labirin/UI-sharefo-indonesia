@@ -3,4 +3,4 @@
 
 [simple project] Can be access on : http://sharefo.com/
 
-![alt text](img/sharefo.png "Pick a Book User Interface")
+![alt text](img/uisharefo.png "Pick a Book User Interface")
